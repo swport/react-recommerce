@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700");
+
+$theme-colors: (
+  "primary": #302d62,
+  "secondary": #3d84a8,
+  "success": #1fab89
+);
+
+$input-btn-focus-width: 0;
+
+$input-transition:      border-color .1s ease-in-out;
+
+$border-radius:         0.05rem;
+$btn-border-radius-sm:  0.05rem;
+$btn-border-radius-md:  0.05rem;
+
+@import "~bootstrap/scss/bootstrap";
+
+@mixin transform-click() {
+    transform: translateY(1px);
+}
+
+.btn {
+    &:not(:disabled):not(.disabled) {
+        &:active {
+            @include transform-click();
+        }
+    }
+}
