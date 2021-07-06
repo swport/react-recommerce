@@ -1,29 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700");
 
-$theme-colors: (
-  "primary": #302d62,
-  "secondary": #3d84a8,
-  "success": #1fab89
-);
+@import './variables';
 
-$input-btn-focus-width: 0;
+@import '~bootstrap/scss/bootstrap';
 
-$input-transition:      border-color .1s ease-in-out;
+// global overrides and extra styles
+@import './global';
 
-$border-radius:         0.05rem;
-$btn-border-radius-sm:  0.05rem;
-$btn-border-radius-md:  0.05rem;
-
-@import "~bootstrap/scss/bootstrap";
-
-@mixin transform-click() {
-    transform: translateY(1px);
-}
-
-.btn {
-    &:not(:disabled):not(.disabled) {
-        &:active {
-            @include transform-click();
-        }
-    }
-}
+// components: ProductListItem
+@import '../components/ProductListItem/style';

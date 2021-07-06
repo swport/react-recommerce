@@ -5,8 +5,6 @@ module.exports = {
     style: {
         postcss: {
             plugins: [
-                require('tailwindcss'),
-                require('autoprefixer'),
                 purgecss({
                     content: [
                         './src/**/*.html',

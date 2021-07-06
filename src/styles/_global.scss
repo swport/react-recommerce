@@ -1,0 +1,15 @@
+body {
+    padding-top: 5.3rem;
+}
+
+.btn {
+    &:not(:disabled):not(.disabled) {
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+}
+
+.btn-success {
+    color: #e3f2fd!important;
+}
